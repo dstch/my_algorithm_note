@@ -1,7 +1,7 @@
 '''
 @Author: your name
 @Date: 2020-01-27 23:32:18
-@LastEditTime : 2020-01-27 23:53:53
+@LastEditTime : 2020-01-28 00:11:17
 @LastEditors  : Please set LastEditors
 @Description: In User Settings Edit
 @FilePath: \my_algorithm_note\kmp.py
