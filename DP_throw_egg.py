@@ -1,7 +1,7 @@
 '''
 @Author: your name
 @Date: 2020-01-29 21:39:11
-@LastEditTime : 2020-01-29 21:45:40
+@LastEditTime : 2020-01-30 13:41:48
 @LastEditors  : Please set LastEditors
 @Description: In User Settings Edit
 @FilePath: \my_algorithm_note\DP_throw_egg.py
@@ -47,7 +47,7 @@ def superEggDrop(K: int, N: int):
         # 穷举所有可能的选择
         for i in range(1, N + 1):
             res = min(res,
-                      max(
+                      max( # 这里的max是指最坏情况
                           dp(K, N - i),
                           dp(K - 1, i - 1)
                       ) + 1
