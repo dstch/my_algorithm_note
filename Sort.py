@@ -1,7 +1,7 @@
 '''
 @Author: your name
 @Date: 2020-01-30 20:39:33
-@LastEditTime : 2020-01-30 23:42:41
+@LastEditTime : 2020-01-31 17:54:04
 @LastEditors  : Please set LastEditors
 @Description: In User Settings Edit
 @FilePath: \my_algorithm_note\Sort.py
@@ -48,5 +48,20 @@ def quick_sort(il):
     return il
 
 
+def insert_sort(il):
+    # 插入排序
+    for i in range(1, len(il)):
+        key = il[i]
+        for j in range(i, -1, -1):
+            # 当前位置是j，j-1为探查位置
+            if il[j-1] > key:
+                il[j] = il[j-1]
+            else:
+                break
+        il[j] = key
+    return il
+
+
+
 if __name__ == "__main__":
-    print(quick_sort(l))
+    print(insert_sort(l))
