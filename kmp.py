@@ -18,6 +18,32 @@ class KMP(object):
         self.t = t
         self.p = p
 
+    # def cal_next(self):
+    #     next = [-1 for _ in range(len(self.p))]
+    #     j = -1
+    #     for i in range(len(self.p)):
+    #         if j == -1 or self.p[i] == self.p[j]:
+    #             i += 1
+    #             j += 1
+    #             next[i] = j
+    #         else:
+    #             j = next[j]
+    #     return next
+
+    # def search(self):
+    #     i = j = 0
+    #     next = self.cal_next()
+    #     while i < len(self.t) and j < len(self.p):
+    #         if j == -1 or self.t[i] == self.p[j]:
+    #             i += 1
+    #             j += 1
+    #         else:
+    #             j = next[j]
+    #     if j == len(self.p):
+    #         return i - j
+    #     else:
+    #         return -1
+
     def cal_next(self):
         next = [-1 for _ in range(len(self.p))]
         j = -1
