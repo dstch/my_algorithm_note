@@ -63,6 +63,21 @@ def insert_sort(il):
     return il
 
 
+def sell_sort(il):
+    n = len(il)
+    gap = n // 2
+    while gap > 0:
+        for i in range(gap, n):
+            j = i
+            key = il[j]
+            while j >= gap and il[j - gap] > key:
+                il[j] = il[j - gap]
+                j -= gap
+            il[j] = key
+        gap //= 2
+    return il
+
+
 def bubble_sort1(il):
     length = len(il)
     flag = False
@@ -96,8 +111,20 @@ def quick_sort1(il):
     return quicksort(il, 0, len(il) - 1)
 
 
+def insert_sort1(il):
+    for i in range(1, len(il)):
+        key = il[i]
+        for j in range(i, -1, -1):
+            if il[j - 1] > key:
+                il[j] = il[j - 1]
+            else:
+                break
+        il[j] = key
+    return il
+
+
 if __name__ == "__main__":
-    result = quick_sort1(l)
+    result = sell_sort(l)
     print(result)
     if result == sl:
         print('Done')
